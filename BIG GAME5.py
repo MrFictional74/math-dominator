@@ -37,6 +37,7 @@ clock = pygame.time.Clock()
 level = 2  # starts at level 1
 health = 100
 p_score = 0
+correct_hits = 0
 
 bg_y = 0
 bg_scroll_speed = 0.3  # nice and subtle
@@ -350,7 +351,7 @@ while running:
     screen.blit(player_img, (x, y))
 
     # ALL GAME TEXT HERE
-    level_text = font.render(f"Level: {level}", True, (43, 139, 247))
+    level_text = font.render(f"Multiples of: {level}", True, (43, 139, 247))
     display_text = font.render(f"SCORE: {p_score}", True, (43, 139, 247))
     screen.blit(level_text, (10, 10))  # Draw in top-left corner
     screen.blit(display_text, (10, 40))
@@ -409,6 +410,13 @@ while running:
                 if target.is_correct:
                     p_score += 50
                     hit_correct_sound.play()
+                    correct_hits += 1
+
+                    if correct_hits >= 10:
+                        level = random.randint(2, 11)
+                        correct_hits = 0
+                        level_sound.play()
+
                 else:
                     health -= 5
                     hit_wrong_sound.play()
@@ -417,10 +425,7 @@ while running:
                 targets.remove(target)
                 break  # break inner loop so we don't reuse the same laser
 
-    # Check for level up
-    if p_score >= level * 100:
-        level += 1
-        level_sound.play()
+
 
     bg_y += bg_scroll_speed
     if bg_y >= 800:
