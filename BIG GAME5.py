@@ -285,7 +285,7 @@ show_startup_screen()
 
 
 
-# Game loop
+# Game loop   _________________________________________    <-----MAIN GAME LOOP
 running = True
 while running:
     screen.fill(BLACK)
@@ -365,6 +365,9 @@ while running:
         target.move()
         target.draw(screen)
         if target.off_screen():
+            if target.is_correct:
+                health -= 5  # or however much you want to deduct
+                hit_wrong_sound.play()
             targets.remove(target)
 
     # Draw image instead of square

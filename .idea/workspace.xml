@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8babfd0-5c37-4006-b8c3-ca5e96f38751" name="Changes" comment="" />
+    <list default="true" id="f8babfd0-5c37-4006-b8c3-ca5e96f38751" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BIG GAME5.py" beforeDir="false" afterPath="$PROJECT_DIR$/BIG GAME5.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,9 +23,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "MrFictional74"
+  }
+}]]></component>
   <component name="GitLabDefaultAccount">
     <option name="defaultAccountId" value="287d9df0-1d1e-4b8b-8005-f29862819a4b" />
   </component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/mrfictional74/math-dominator.git",
+    "accountId": "29b90bb2-413a-4dcf-b1a9-07b0b3e8819d"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
@@ -74,7 +89,7 @@
       <option name="presentableId" value="Default" />
       <updated>1747414493959</updated>
       <workItem from="1747414499326" duration="55939000" />
-      <workItem from="1748376669579" duration="821000" />
+      <workItem from="1748376669579" duration="2024000" />
     </task>
     <servers />
   </component>
@@ -87,6 +102,6 @@
     <SUITE FILE_PATH="coverage/Gamerizer$BIG_GAME.coverage" NAME="BIG GAME Coverage Results" MODIFIED="1747542640549" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Gamerizer$BIG_GAME1.coverage" NAME="BIG GAME1 Coverage Results" MODIFIED="1747628271127" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Gamerizer$BIG_GAME3.coverage" NAME="BIG GAME3 Coverage Results" MODIFIED="1747800538117" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Gamerizer$BIG_GAME5.coverage" NAME="BIG GAME5 Coverage Results" MODIFIED="1748376672342" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Gamerizer$BIG_GAME5.coverage" NAME="BIG GAME5 Coverage Results" MODIFIED="1748378671784" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
