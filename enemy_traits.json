@@ -1,0 +1,13 @@
+
+
+{
+  "first_names": ["Vrax", "Blip", "Zuul", "Gorn", "Xeth", "Dravok", "Gilroy", "Magurkus", "Magnus", "Flembo", "Grithy", "Frang", "Shrodd", "Elgonax", "Migwarper", "Twiggy", "Bando", "Bunndix", "Grethy", "Commander Zux", "Lord Vink", "Lord Smark", "Lord Hayward", "The Great", "King", "Lord", "Captain", "Dox", "Rox", "Bolobo", "Blobbo", "Nukk", "Grith", "Manadar", "Grimbolbot", "Flibloyd", "Maltrax", "The Great", "The Mighty", "Mighty", "Evil", "Coloko", "Goyl", "Freeb", "Bilwob", "Wikki", "Gigger", "Harold"],
+
+
+  "last_names": ["Gzorper", "Mankiller", "Zignuts", "Walx", "Vilgo", "Smeggy", "Stinky", "Glorp", "Fling", "Giggzag", "Smoosh", "Wizgig", "Zigdug", "Mugwag", "Lingding", "Bajogy", "Fahoey", "Xix", "Flipps", "Grot", "Rot", "Boznaught", "Fringding", "Lozpockle", "Zur", "Shmerk", "Zemp", "Xorp", "Xing", "Luggz", "Nugglebugger", "Inkyjing", "Fizwhopper", "Johnson", "Migglemound", "Grush", "Mork", "Deathbringer", "Killface", "Bloodsucker"],
+
+  "bounty_value": [100],
+
+  "hit_points": [3,4,5,8,10],
+  }
+}
