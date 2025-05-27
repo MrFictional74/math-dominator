@@ -20,6 +20,12 @@ WIDTH, HEIGHT = 800, 600
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Multiplication Dominator by MrFictional")
 
+show_start_screen = True
+show_instruction_screen = False
+game_running = False
+
+
+
 
 backgrounds = {}
 for i in range(2, 11):
@@ -34,7 +40,7 @@ for i in range(2, 11):
 clock = pygame.time.Clock()
 
 #Stating initial variables
-level = 2  # starts at level 1
+level = 2  # starts at level 2
 health = 100
 p_score = 0
 correct_hits = 0
@@ -99,6 +105,33 @@ spawn_timer = 0
 
 debris_list = []
 debris_timer = 0
+
+
+
+def show_instructions():
+    instruct_img = pygame.image.load("instruct.png").convert()
+    screen.blit(instruct_img, (0, 0))
+
+    font = pygame.font.SysFont(None, 28)
+    instructions = [
+
+
+        "",
+        "Target multiple is listed for each level.",
+        "Earn 10 points for right answers.",
+        "Shoot the wrong number:    -5 health",
+        "Missed numbers:    -5 health",
+        "Asteroids:    -5 health.",
+
+
+    ]
+
+    for i, line in enumerate(instructions):
+        text = font.render(line, True, (255, 255, 255))
+        text_rect = text.get_rect(center=(WIDTH // 2, 200 + i * 40))
+        screen.blit(text, text_rect)
+
+
 
 
 #Laser setup
@@ -287,6 +320,7 @@ show_startup_screen()
 
 
 # Game loop   _________________________________________    <-----MAIN GAME LOOP
+# Game loop
 running = True
 while running:
     screen.fill(BLACK)
@@ -294,18 +328,43 @@ while running:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
-        elif event.type == pygame.KEYDOWN:
-            if event.key == pygame.K_SPACE:
-                laser_x = x + 25 - 2  # center of the rocket (50px wide)
-                laser_y = y
-                lasers.append(Laser(laser_x, laser_y))
-                laser_sound.play()
+
+        if show_start_screen:
+            if event.type == pygame.KEYDOWN:
+                show_start_screen = False
+                show_instruction_screen = True
+
+        elif show_instruction_screen:
+            if event.type == pygame.KEYDOWN:
+                show_instruction_screen = False
+                game_running = True
+
+        elif game_running:
+            if event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_SPACE:
+                    laser_x = x + 25 - 2
+                    laser_y = y
+                    lasers.append(Laser(laser_x, laser_y))
+                    laser_sound.play()
+
+    if show_instruction_screen:
+        show_instructions()
+        pygame.display.flip()
+        continue  # Skip rest of game logic this frame
+
+    if not game_running:
+        continue  # Don't process gameplay if not active
 
 
 
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            running = False
+    # 🧠 From here down is GAMEPLAY-ONLY CODE.
+    # Move player, spawn targets, update collisions, draw everything, etc.
+
+
+
+
+
+
 
     # Key handling
     keys = pygame.key.get_pressed()
