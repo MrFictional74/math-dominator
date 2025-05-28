@@ -471,7 +471,7 @@ while running:
                     hit_correct_sound.play()
                     correct_hits += 1
 
-                    if correct_hits >= 10:
+                    if correct_hits >= 5:
                         level = random.randint(2, 11)
                         correct_hits = 0
                         level_sound.play()
