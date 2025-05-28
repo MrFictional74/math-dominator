@@ -246,9 +246,9 @@ while running:
     draw_stars()
     screen.blit(player_img, (x, y))
 
-    level_text = font.render(f"Multiples of: {level}", True, (43, 139, 247))
-    display_text = font.render(f"SCORE: {p_score}", True, (43, 139, 247))
-    health_text = font.render(f"Health: {health}", True, (255, 100, 100))
+    level_text = font.render(f"MULTIPLES OF: {level}", True, (255, 100, 100))
+    display_text = font.render(f"Score: {p_score}", True, (43, 139, 247))
+    health_text = font.render(f"Health: {health}", True, (43, 139, 247))
     screen.blit(level_text, (10, 10))
     screen.blit(display_text, (10, 40))
     screen.blit(health_text, (10, 70))
@@ -288,7 +288,7 @@ while running:
             target_rect = pygame.Rect(target.x, target.y, 70, 70)
             if laser.rect.colliderect(target_rect):
                 if target.is_correct:
-                    p_score += 50
+                    p_score += 10
                     correct_hits += 1
                     hit_correct_sound.play()
                     if correct_hits >= 5:
