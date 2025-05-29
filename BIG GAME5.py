@@ -7,6 +7,8 @@ import random
 pygame.init()
 pygame.mixer.init()
 
+
+
 pygame.mixer.music.load("bg_music.wav")
 pygame.mixer.music.set_volume(0.5)
 pygame.mixer.music.play(-1)
